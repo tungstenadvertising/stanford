@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" fill="none" viewBox="0 0 26 27">
+  <g clip-path="url(#a)">
+    <path fill="#000" fill-opacity=".1" d="M21.186 15.389a8.143 8.143 0 0 0-8.148-8.149 8.143 8.143 0 0 0-8.149 8.149h2.328a5.822 5.822 0 0 1 5.82-5.82 5.822 5.822 0 0 1 5.821 5.82"/>
+    <path fill="url(#b)" stroke="url(#c)" stroke-width="1.048" d="M12.98 18.253a5.238 5.238 0 1 0 0-10.477 5.238 5.238 0 0 0 0 10.477Z"/>
+    <path fill="url(#d)" d="M24.678 7.24C21.478.793 13.643-1.84 7.206 1.375a13.159 13.159 0 0 0-4.994 4.353l5.238 9.08a5.817 5.817 0 0 1 5.471-7.566"/>
+    <path fill="url(#e)" d="M2.212 5.727c-4.005 5.984-2.41 14.086 3.574 18.09a12.95 12.95 0 0 0 6.204 2.165l5.471-9.312a5.819 5.819 0 0 1-8.195.78 5.943 5.943 0 0 1-1.816-2.643"/>
+    <path fill="url(#f)" d="M11.99 25.982c7.182.547 13.445-4.842 13.98-12.013a13.062 13.062 0 0 0-1.292-6.729H12.921a5.823 5.823 0 0 1 5.797 5.844 5.818 5.818 0 0 1-1.257 3.585"/>
+    <path fill="#000" d="m2.212 5.727 5.238 9.08a5.863 5.863 0 0 1 .233-3.958L2.444 5.378" opacity=".075"/>
+    <path fill="#000" d="m11.99 25.982 5.471-9.312a5.826 5.826 0 0 1-3.375 1.978l-2.329 7.334M24.678 7.24H12.921a5.841 5.841 0 0 1 4.54 2.212l7.45-1.862" opacity=".05"/>
+  </g>
+  <defs>
+    <radialGradient id="b" cx="0" cy="0" r="1" gradientTransform="translate(12.977 7.774) scale(10.4766)" gradientUnits="userSpaceOnUse">
+      <stop offset=".1" stop-color="#7FB3DF"/>
+      <stop offset=".9" stop-color="#0F5B94"/>
+    </radialGradient>
+    <radialGradient id="c" cx="0" cy="0" r="1" gradientTransform="translate(12.977 7.774) scale(10.4766)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F0EE"/>
+      <stop offset="1" stop-color="#DDD"/>
+    </radialGradient>
+    <radialGradient id="d" cx="0" cy="0" r="1" gradientTransform="matrix(11.2333 0 0 7.40215 13.443 -.001)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F06B59"/>
+      <stop offset="1" stop-color="#DF2227"/>
+    </radialGradient>
+    <radialGradient id="e" cx="0" cy="0" r="1" gradientTransform="matrix(13.2688 0 0 15.3937 11.347 11.801)" gradientUnits="userSpaceOnUse">
+      <stop offset=".65" stop-color="#4CB749"/>
+      <stop offset="1" stop-color="#388B41"/>
+    </radialGradient>
+    <radialGradient id="f" cx="0" cy="0" r="1" gradientTransform="matrix(11.2164 0 0 15.0234 17.033 11.932)" gradientUnits="userSpaceOnUse">
+      <stop offset=".6" stop-color="#FCD209"/>
+      <stop offset=".7" stop-color="#F7C616"/>
+      <stop offset="1" stop-color="#BC821E"/>
+    </radialGradient>
+    <clipPath id="a">
+      <path fill="#fff" d="M0 0h26.005v26.017H0z"/>
+    </clipPath>
+  </defs>
+</svg>

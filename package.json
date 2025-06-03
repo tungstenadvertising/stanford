@@ -1,0 +1,18 @@
+{
+	"dependencies": {
+		"@tailwindcss/cli": "^4.1.7",
+		"tailwindcss": "^4.1.7"
+	},
+	"devDependencies": {
+		"concurrently": "^8.2.2",
+		"vite": "^5.2.0",
+		"webp-converter-cli": "^2.0.0"
+	},
+	"scripts": {
+		"dev": "concurrently \"vite\" \"npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --watch\"",
+		"build": "npm run build:css && npm run build:webp && npm run build:copy-html",
+		"build:copy-html": "cp src/*.html build/",
+		"build:css": "npx tailwindcss -i ./src/css/input.css -o ./build/css/style.min.css --minify",
+		"build:webp": "webp-converter-cli src/images/* -o build/images/"
+	}
+}
