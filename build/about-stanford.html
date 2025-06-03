@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Stanford</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <style>
+    .swiper-wrapper-fade {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 20px 0;
+    }
+
+    .swiper-wrapper-fade::before,
+    .swiper-wrapper-fade::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 150px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .swiper-wrapper-fade::before {
+      left: 0;
+      background: linear-gradient(to right, white 5%, transparent);
+    }
+
+    .swiper-wrapper-fade::after {
+      right: 0;
+      background: linear-gradient(to left, white 5%, transparent);
+    }
+
+    @media (max-width: 640px) {
+
+      .swiper-wrapper-fade::before,
+      .swiper-wrapper-fade::after {
+        display: none;
+      }
+    }
+
+    .swiper {
+      width: 100%;
+      margin: auto;
+      position: relative;
+      padding: 25px;
+    }
+
+    .swiper-slide {
+      position: relative;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 426px;
+      opacity: .5;
+      scale: 0.65;
+      max-width: 300px;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      filter: drop-shadow(0 1px 4px hsla(0deg 0% 0% / 0.3)) drop-shadow(3px 5px 17px rgba(101, 33, 33, 0.15));
+
+
+      &:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, transparent 0%, black);
+        z-index: 1;
+        opacity: 0.4;
+      }
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      scale: 1.01;
+      filter: brightness(1.1) saturate(1.1);
+    }
+
+    .swiper-slide-prev,
+    .swiper-slide-next {
+      z-index: 2000 !important;
+    }
+
+    .swiper-slide-active {
+      scale: 1;
+      z-index: 2;
+      opacity: 1;
+
+      .caption-box {
+        opacity: 1;
+      }
+
+      .plus-link {
+        opacity: 1;
+      }
+    }
+
+    .swiper-slide-visible {
+      transition: .25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .swiper .swiper-button-prev,
+    .swiper .swiper-button-next {
+      color: var(--color-cardinal);
+
+      &:after {
+        font-size: clamp(35px, 10vw, 64px) !important;
+      }
+    }
+
+    @media (width > 400px) {
+      .swiper-button-prev {
+        left: calc(50% - 180px);
+        transform: translateX(-50%);
+      }
+
+      .swiper-button-next {
+        right: calc(50% - 180px);
+        transform: translateX(50%);
+      }
+    }
+
+
+
+    .caption-box {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      color: white;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      font-weight: bold;
+      max-width: 70%;
+      z-index: 10;
+      opacity: 0;
+      translate: 10% 0;
+      transition: 0.1s ease-out;
+
+      .swiper-slide-active & {
+        opacity: 1;
+        translate: 0 0;
+        transition: 0.7s ease-in-out;
+
+      }
+    }
+
+    .plus-link {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #900;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      z-index: 11;
+      opacity: 0;
+      transition: .3s ease-in-out;
+    }
+
+    .plus-link:hover {
+      background-color: #fff;
+    }
+
+    .swiper-lazy-preloader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -21px;
+      margin-top: -21px;
+      width: 42px;
+      height: 42px;
+      z-index: 10;
+      transform-origin: 50%;
+      box-sizing: border-box;
+      border: 4px solid var(--color-cardinal, #8C1515);
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: swiper-preloader-spin 1s infinite linear;
+    }
+
+    @keyframes swiper-preloader-spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!------------------- Source Code to Copy: Start ------------------>
+  <!------------------ Hero Section: Page Title Start -------------->
+  <div class="hero">
+    <div class="container">
+      <h1 class="page-title text-white font-bold text-balance">About <br> Stanford</h1>
+    </div>
+    <img src="./images/about-stanford-hero.svg" fetchpriority="high" decoding="async" alt="Interview Background"
+      width="724" height="339" class=" ml-auto my-1">
+  </div>
+  <!------------------ Hero Section: Page Title End -------------->
+
+
+  <div class="container px-4 mx-auto pb-14">
+    <!-------------------------------- Hero Divider ------------------------------->
+    <hr class="hero-divider mx-auto text-cardinal border-current">
+
+    <div class="square-title text-cardinal font-semibold"><span>Land Acknowledgement</span></div>
+
+    <p>Stanford University sits on the ancestral land of the Muwekma Ohlone Tribe. This land was and continues to be of
+      great importance of the Ohlone people. Consistent with our values of community and inclusion, we have a
+      responsibility to acknowledge, honor, and make visible the University’s relationship to Native peoples. </p>
+  </div>
+  <div class="swiper-wrapper-fade">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/slide-1.jpg" alt="Slide 1" width="426" height="512" fetchpriority="low" decoding="async"
+            loading="lazy" />
+          <div class="swiper-lazy-preloader"></div>
+          <div class="caption-box">The Dish is a
+            special area to both Stanford and the surrounding communities, and it serves many purposes.</div>
+          <a href="https://dish.stanford.edu" class="plus-link" target="_blank">+</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/slide-2.jpg" alt="Slide 2" fetchpriority="low" decoding="async" loading="lazy" />
+          <div class="swiper-lazy-preloader"></div>
+          <div class="caption-box">Stanford Memorial
+            Church is located at the center of Stanford University, and is "the principle building ...</div>
+          <a href="https://orsl.stanford.edu/memorial-church" class="plus-link" target="_blank">+</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/slide-3.jpg" alt="Slide 3" fetchpriority="low" decoding="async" loading="lazy" />
+          <div class="swiper-lazy-preloader"></div>
+          <div class="caption-box">Union Square @
+            Tresidder’s lively campus hub offers a variety of options for all tastes and schedules...</div>
+          <a href="https://rde.stanford.edu/dining-hospitality/union-square-tresidder-memorial-union" class="plus-link" target="_blank">+</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/slide-4.jpg" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
+          <div class="swiper-lazy-preloader"></div>
+          <div class="caption-box">The Hoover
+            Institution Library & Archives supports a vibrant community of scholars interested in the meaning and role
+            of history and is open to anyone.</div>
+          <a href="https://www.hoover.org/library-archives/visit" class="plus-link" target="_blank">+</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/slide-5.jpg" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
+          <div class="swiper-lazy-preloader"></div>
+          <div class="caption-box">A self-guided tour
+            of Stanford Gardens</div>
+          <a href="https://visit.stanford.edu/pdf/explore-campus/a_self-guided_tour_of_stanford_gardens.pdf" class="plus-link" target="_blank">+</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/slide-6.jpg" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
+          <div class="swiper-lazy-preloader"></div>
+          <div class="caption-box">This 13-minute
+            student-hosted virtual tour is best viewed at 1080s.</div>
+          <a href="https://visit.stanford.edu/tours/virtual/" class="plus-link" target="_blank">+</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/slide-7.jpg" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
+          <div class="swiper-lazy-preloader"></div>
+          <div class="caption-box">Self-guided tour
+            Stanford Arts District (and others arts facilities)...</div>
+          <a href="https://visit.stanford.edu/pdf/explore-campus/self-guided_tour_-_stanford_arts_district.pdf" class="plus-link" target="_blank">+</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/slide-8.jpg" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
+          <div class="swiper-lazy-preloader"></div>
+          <div class="caption-box">Palm Drive,
+            Stanford's grand main entry, welcomes students and visitors to a university...</div>
+          <a href="https://125.stanford.edu/kiosk/k11/" class="plus-link" target="_blank">+</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/slide-9.jpg" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
+          <div class="swiper-lazy-preloader"></div>
+          <div class="caption-box">Stanford History:
+            In 1884, tragedy struck the family when Leland and Jane's only child...</div>
+          <a href="https://founders.stanford.edu/stanford-history" class="plus-link" target="_blank">+</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/slide-10.jpg" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
+          <div class="swiper-lazy-preloader"></div>
+          <div class="caption-box">Stanford University
+            Quadrangle, Stanford University Campus, Stanford, Santa Clara County, CA</div>
+          <a href="https://125.stanford.edu/then-and-now/main-quad/" class="plus-link" target="_blank" target="_blank">+</a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="./images/bay-area-map.jpg" alt="" width="905" height="649" fetchpriority="low" decoding="async"
+      loading="lazy" class="rounded-4xl mx-auto block max-w-full object-cover h-auto my-10 border-zinc-666 border-2">
+
+  </div>
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      loop: true,
+      slideFullyVisibleClass: 'swiper-slide-visible',
+      watchSlidesProgress: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+  <!------------------- Source Code to Copy: End ------------>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Pronunciation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body>
+
+  <!------------- Source Code to Copy: start ------------->
+  <!------------------ Hero Section: Page Title Start -------------->
+  <div class="hero">
+    <div class="container">
+      <h1 class="page-title text-white font-bold text-balance">Name <br> Pronunciation</h1>
+    </div>
+    <img src="./images/name-pronunciation-hero.webp" fetchpriority="low" decoding="async" alt="Interview Background"
+      width="1154" height="347" class="hero-image">
+  </div>
+  <!------------------ Hero Section: Page Title End -------------->
+
+  <div class="container">
+    <!-------------------------------- Hero Divider ------------------------------->
+    <hr class="hero-divider mx-auto text-cardinal border-current">
+    <p class="mt-0 px-8 text-pretty">You are encouraged to upload a recording containing the correct pronunciation of
+      your name.
+    </p>
+    <div class="bg-cardinal rounded-[10px] text-white mb-10 p-8 mx-auto">
+      <div>
+        <header class="text-2xl font-semibold inline-block">
+          <label for="fileInput">Name Pronunciation:</label>
+          <br />
+          <hr class="border-t-2 border-white my-4">
+        </header>
+      </div>
+      <form action="" method="POST" id="uploadForm">
+        <div style="position: relative; height: 41px;">
+          <label class="bg-white leading-tight rounded-[5px] text-zinc-666 py-2 w-full absolute inset-0 px-3"
+            id="fileLabel">
+            <input style="display: none;" id="fileInput" type="file" accept=".mp3,.mp4,.mp4a">
+            <span class="file-text">select a file</span>
+          </label>
+          <button type="button"
+            class="bg-zinc-c6c6c6 hover:bg-zinc-500 transition-colors text-white absolute top-1.5 border-none right-2 text-xl rounded-[5px] cursor-pointer"
+            onclick="document.getElementById('fileInput').click()">Browse</button>
+        </div>
+        <div class="flex justify-end">
+          <button type="submit"
+            class="disabled:bg-zinc-c6c6c6 disabled:text-white hover:bg-zinc-500 transition-colors text-cardinal rounded-[5px] border-none px-3 py-1 text-xl mt-4 disabled:cursor-not-allowed"
+            id="uploadButton" disabled>Upload File</button>
+        </div>
+      </form>
+
+      <script>
+        const fileInput = document.getElementById('fileInput');
+        const fileLabel = document.getElementById('fileLabel').querySelector('.file-text');
+        const uploadButton = document.getElementById('uploadButton');
+        const uploadForm = document.getElementById('uploadForm');
+
+        fileInput.addEventListener('change', function (e) {
+          const file = e.target.files[0];
+          if (file) {
+            fileLabel.textContent = file.name;
+            uploadButton.disabled = false;
+          } else {
+            fileLabel.textContent = 'select a file';
+            uploadButton.disabled = true;
+          }
+        });
+
+        uploadForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const file = fileInput.files[0];
+          if (file) {
+            // Here send the file to a server
+
+          }
+        });
+      </script>
+    </div>
+
+    <p class="px-8 text-pretty">
+      Supported file types include mp3, mp4, mp4a.
+      <br>
+      Instructions on how to generate an audio file from your computer
+      are available at the following <a href="#" style="color: inherit;">website</a>.
+    </p>
+  </div>
+  <!------------- Source Code to Copy: end ------------->
+
+</body>
+
+</html>
