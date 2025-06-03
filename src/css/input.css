@@ -144,7 +144,7 @@ a {
 		top: 36px;
 		width: 118px;
 		height: 88px;
-		background-image: url("/images/ribbon-edge.svg");
+		background-image: url("/src/images/ribbon-edge.svg");
 		background-repeat: no-repeat;
 		background-size: contain;
 		z-index: 0;
