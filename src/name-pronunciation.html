@@ -21,7 +21,7 @@
     <div class="container">
       <h1 class="page-title text-white font-bold text-balance">Name <br> Pronunciation</h1>
     </div>
-    <img src="./images/name-pronunciation-hero.jpg" fetchpriority="low" decoding="async" alt="Interview Background"
+    <img src="./images/name-pronunciation-hero.webp" fetchpriority="low" decoding="async" alt="Interview Background"
       width="1154" height="347" class="hero-image">
   </div>
   <!------------------ Hero Section: Page Title End -------------->
@@ -58,32 +58,7 @@
         </div>
       </form>
 
-      <script>
-        const fileInput = document.getElementById('fileInput');
-        const fileLabel = document.getElementById('fileLabel').querySelector('.file-text');
-        const uploadButton = document.getElementById('uploadButton');
-        const uploadForm = document.getElementById('uploadForm');
 
-        fileInput.addEventListener('change', function (e) {
-          const file = e.target.files[0];
-          if (file) {
-            fileLabel.textContent = file.name;
-            uploadButton.disabled = false;
-          } else {
-            fileLabel.textContent = 'select a file';
-            uploadButton.disabled = true;
-          }
-        });
-
-        uploadForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-          const file = fileInput.files[0];
-          if (file) {
-            // Here send the file to a server
-
-          }
-        });
-      </script>
     </div>
 
     <p class="px-8 text-pretty">
@@ -93,6 +68,9 @@
       are available at the following <a href="#" style="color: inherit;">website</a>.
     </p>
   </div>
+
+  <script src="./js/name-pronunciation.js"></script>
+
   <!------------- Source Code to Copy: end ------------->
 
 </body>

@@ -11,11 +11,7 @@
 		"webp-converter-cli": "^0.0.5"
 	},
 	"scripts": {
-		"dev": "concurrently \"vite\" \"npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --watch\" ",
-		"build": "npm run build:css && npm run build:webp && npm run build:copy-svg && npm run build:copy-html",
-		"build:copy-html": "cp src/*.html build/",
-		"build:css": "npx tailwindcss -i ./src/css/input.css -o ./build/css/style.min.css --minify",
-		"build:webp": "node convert-images.js",
-		"build:copy-svg": "cp src/images/*.svg build/images/"
+		"dev": "concurrently \"vite\" \"npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --minify --watch\" ",
+		"webp": "node convert-images.js"
 	}
 }

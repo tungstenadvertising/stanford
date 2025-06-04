@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const srcDir = path.join(__dirname, 'src/images');
-const destDir = path.join(__dirname, 'build/images');
+const destDir = path.join(__dirname, 'src/images');
 
 if (!fs.existsSync(destDir)) {
   fs.mkdirSync(destDir, { recursive: true });
