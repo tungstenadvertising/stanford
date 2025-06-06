@@ -11,6 +11,7 @@
 	},
 	"scripts": {
 		"dev": "concurrently \"vite\" \"npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --minify --watch\" ",
+		"build": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --minify && node inject-css.js",
 		"webp": "node convert-images.js"
 	}
 }
