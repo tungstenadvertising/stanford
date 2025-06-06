@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://tungstenadvertising.github.io/stanford/src/css/style.css">
+  <!-- <link rel="stylesheet" href="https://tungstenadvertising.github.io/stanford/src/css/style.css"> -->
+   <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
@@ -29,7 +30,7 @@
   <!------------------ Hero Section: Page Title End -------------->
 
 
-  <div class="container ">
+  <div class="container @container">
     <!-------------------------------- Hero Divider ------------------------------->
     <hr class="hero-divider mx-auto text-cardinal border-current">
 
@@ -63,10 +64,10 @@
 
     <!------------------------- Application Requirements--------------------------------- -->
     <h2 class="square-title text-cardinal font-semibold"><span>Application requirements</span></h2>
-    <div class="flex flex-wrap lg:flex-nowrap justify-center my-5 gap-2">
-      <div class="w-3xs lg:w-unset flex flex-col items-center gap-2">
+    <div class="flex flex-col @2xl:flex-row justify-center my-10 gap-2 @3xl:gap-3 text-base @4xl:text-lg @5xl:text-xl text-balance *:flex-1">
+      <div class="flex flex-col items-center gap-2">
         <div class=" icon-box">
-          <svg class="svg-icon text-black fill-current" width="50" height="55" viewBox="0 0 50 55"
+          <svg class="svg-icon text-black fill-current size-12 @4xl:size-14 @5xl:size-max" width="50" height="55" viewBox="0 0 50 55"
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M5.3383 3.68095C5.39015 3.3958 6.01241 2.15154 6.1939 1.89232C6.868 0.933198 8.21621 0.103689 9.40886 0H41.1954C46.1994 0.699899 45.4734 5.62511 45.4475 9.46159C46.6142 9.3579 47.9883 10.1615 48.6365 11.0947C48.8439 11.3798 49.3625 12.4686 49.4143 12.7796C49.7255 14.8534 49.3625 18.0937 49.4143 20.3489C49.5958 30.2253 49.6736 40.1534 49.6217 50.0557C49.3625 52.8294 47.8328 54.6439 44.9808 54.8772H4.30122C2.7456 54.6699 1.24182 53.7885 0.567715 52.3628C0.178809 51.5333 0.256593 50.7297 0.023249 49.8743C-0.0545322 40.4904 0.0751079 31.0548 0.23067 21.6969C0.282525 18.9491 -0.0545274 15.6311 0.23067 12.987C0.464014 10.5244 3.03079 9.09868 5.3383 9.48751V3.68095ZM4.53456 11.9501C3.83453 12.1575 3.10858 12.3908 2.92709 13.1685C2.87523 13.4277 2.71967 14.2313 2.69374 14.4646C2.66782 14.8534 2.69374 15.6311 2.69374 16.1495C2.61596 19.312 2.59004 22.8374 2.69374 25.9999C2.97894 33.6988 2.12335 41.7865 2.87523 49.4595C2.97894 50.626 2.66781 51.5074 4.01602 52.1036H45.8623L46.7179 51.2481V13.0129C46.3809 12.1316 45.4734 12.0538 44.6437 11.8724L4.56049 11.9242L4.53456 11.9501Z" />
@@ -76,9 +77,9 @@
         </div>
         <div class="font-bold text-center leading-none">Verified AMCAS application</div>
       </div>
-      <div class="w-3xs lg:w-unset flex flex-col items-center gap-2">
+      <div class="flex flex-col items-center gap-2">
         <div class=" icon-box">
-          <svg class="svg-icon text-black fill-current" width="51" height="56" viewBox="0 0 51 56" fill="none"
+          <svg class="svg-icon text-black fill-current size-12 @4xl:size-14 @5xl:size-max" width="51" height="56" viewBox="0 0 51 56" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M33.7789 14.2482H9.05019C8.33637 14.2482 7.77551 13.6874 7.77551 12.9737C7.77551 12.26 8.33637 11.6993 9.05019 11.6993H33.7789C34.4927 11.6993 35.0536 12.26 35.0536 12.9737C35.0536 13.6874 34.4927 14.2482 33.7789 14.2482Z" />
@@ -96,9 +97,9 @@
         </div>
         <div class="font-bold text-center leading-none">Supplemental application submission</div>
       </div>
-      <div class="w-3xs lg:w-unset flex flex-col items-center gap-2">
+      <div class="flex flex-col items-center gap-2">
         <div class=" icon-box">
-          <svg class="svg-icon text-black fill-current" width="46" height="59" viewBox="0 0 46 59" fill="none"
+          <svg class="svg-icon text-black fill-current size-12 @4xl:size-14 @5xl:size-max" width="46" height="59" viewBox="0 0 46 59" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M8.20001 5.86475C8.66548 7.57528 9.70596 9.36728 10.0072 11.105C10.0619 11.4308 9.89763 11.4308 10.3905 11.4036L12.2798 5.86475H15.3738V15.9651H13.1833V10.0189L12.225 12.3539C11.7595 13.1685 11.5405 15.1234 11.075 15.775C10.8286 16.128 9.92501 15.9108 9.48691 15.9651L7.15953 9.8017V15.9379H4.96906V5.83759H8.17263L8.20001 5.86475Z" />
@@ -117,9 +118,9 @@
         </div>
         <div class="font-bold text-center leading-none">MCAT results</div>
       </div>
-      <div class="w-3xs lg:w-unset flex flex-col items-center gap-2">
+      <div class="flex flex-col items-center gap-2">
         <div class=" icon-box">
-          <svg class="svg-icon text-black fill-current" width="61" height="41" viewBox="0 0 61 41" fill="none"
+          <svg class="svg-icon text-black fill-current size-12 @4xl:size-14 @5xl:size-max" width="61" height="41" viewBox="0 0 61 41" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M37.8322 0.0689507C43.9752 0.00297908 50.1504 -0.0300138 56.2934 0.0359579C58.5126 0.431788 60.3459 1.81718 60.6675 4.22515C60.764 11.9438 60.5388 19.6625 60.6675 27.3482C60.6675 27.909 60.9248 28.3048 60.9248 28.7666C60.9569 31.2076 61.3429 36.7822 59.9921 38.6624C57.9015 41.5321 55.425 40.5756 52.3374 40.7075C36.8995 41.3012 21.3329 40.7735 5.86278 40.9714C4.41547 40.6745 3.12898 40.7405 1.87464 39.7509C1.19923 39.2231 0.234364 37.8047 0.137877 36.9801C-0.215909 34.5391 0.234364 30.9437 0.137877 28.3048C0.105715 27.0514 0.105715 26.4576 0.137877 25.2041C0.395176 18.2771 -0.0550974 11.1852 0.137877 4.25814C0.523826 2.18003 2.19627 0.596723 4.25466 0.299851C15.4472 0.431794 26.704 0.233869 37.8965 0.134911L37.8322 0.0689507ZM57.1296 10.0966V4.19218L55.8431 3.56544C39.0222 3.56544 22.2334 3.96128 5.38034 3.82933C5.02656 4.02725 4.38331 3.96127 4.06169 4.15919C3.41844 4.55502 3.32195 7.68867 3.35412 8.51332C3.35412 9.07407 3.80439 9.46991 3.35412 10.0637H57.0975L57.1296 10.0966ZM57.3869 17.8153H3.64358V37.0791H57.3869V17.8153Z" />
@@ -129,9 +130,9 @@
         </div>
         <div class="font-bold text-center leading-none">Payment of application fee (or AMCAS fee waiver)</div>
       </div>
-      <div class="w-3xs lg:w-unset flex flex-col items-center gap-2">
+      <div class="flex flex-col items-center gap-2">
         <div class=" icon-box">
-          <svg class="svg-icon text-black fill-current" width="55" height="59" viewBox="0 0 55 59" fill="none"
+          <svg class="svg-icon text-black fill-current size-12 @4xl:size-14 @5xl:size-max" width="55" height="59" viewBox="0 0 55 59" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M26.687 0.0883405C27.7452 -0.143901 28.8808 0.088335 29.7583 0.707645C31.7715 2.1269 33.9395 4.42351 35.8752 6.07501C37.1915 7.1846 38.6626 8.75868 40.3918 8.91351C41.9662 9.04253 44.3149 8.8877 45.7602 9.37799C46.87 9.73925 47.5411 10.9263 47.6443 12.0359C47.6701 12.4745 47.4636 12.7584 47.4636 13.1455C47.4636 13.6358 47.3862 14.9776 47.5669 15.3131L53.3998 20.2159C54.2515 20.9385 54.8709 21.79 55 22.9512V55.3618C54.7161 57.3229 53.1159 58.768 51.1286 58.8454H3.66495C2.55514 58.6906 1.52276 58.2519 0.851713 57.3229C0.49038 56.8068 0 55.5682 0 54.9747C0 54.7425 0.180666 54.5102 0.180666 54.2264C0.283903 43.5175 0.0258105 32.7828 0.258096 22.0997L1.57438 20.4224L8.74942 14.5905C8.74942 13.8422 8.95589 13.1197 9.03332 12.4229C9.16236 11.1327 9.00751 9.79086 9.49789 8.55224C9.96246 7.41684 10.8142 7.10719 11.9498 6.84914L17.886 7.33944C19.3313 6.07501 20.8541 4.9138 22.2994 3.64938C23.3576 2.74622 25.4481 0.372187 26.6612 0.114141L26.687 0.0883405ZM12.1563 9.48121L11.8724 9.76506L10.6335 27.1574C13.6274 29.6088 16.6729 32.0344 19.6926 34.4859C21.3186 35.8277 23.306 37.8663 24.9836 38.9759C26.0934 39.6984 27.5387 39.6726 28.8034 39.4661L43.9794 26.9509C44.2116 25.2478 43.9793 23.4931 44.0568 21.7642C44.1858 18.9515 44.5988 16.113 44.8311 13.3003C44.8569 12.939 44.9085 11.9585 44.6504 11.7778L12.1563 9.4296V9.48121ZM2.83904 54.8457L21.1122 39.3113C21.1896 39.0791 20.8024 38.7952 20.6476 38.6662C15.7954 34.3827 10.427 30.3571 5.39418 26.2284C5.1619 26.022 2.96809 24.035 2.86485 24.164V54.8457H2.83904ZM52.1609 24.7059C51.748 24.7575 51.3867 25.1446 51.0511 25.3768C49.1154 26.7445 47.1797 28.1637 45.2956 29.6088C41.3468 32.6021 37.6044 35.8535 33.7072 38.9243L52.1609 54.4586V24.7059ZM5.65228 56.1617H49.7349L31.565 40.9112C29.8616 42.0982 28.313 43.0788 26.145 42.5627C25.1384 42.3047 24.1835 41.6595 23.4608 40.937L5.65228 56.1617Z" />
