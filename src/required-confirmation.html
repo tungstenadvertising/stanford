@@ -17,12 +17,12 @@
 
   <!------------- Source Code to Copy: start ------------->
   <!------------------ Hero Section: Page Title Start -------------->
-  <div class="hero">
+  <div class="hero relative flex flex-col overflow-hidden">
     <div class="container">
-      <h1 class="page-title text-white font-bold text-balance">Required <br> Confirmation</h1>
+      <h1 class="page-title text-white font-bold text-balance mb-5 mx-5 leading-none">Required <br> Confirmation</h1>
     </div>
     <img src="https://tungstenadvertising.github.io/stanford/build/images/required-confirmation-hero.webp"
-      fetchpriority="high" decoding="async" alt="" width="1154" height="347" class="hero-image">
+      fetchpriority="high" decoding="async" alt="" width="1154" height="347" class="hero-image relative z-0 object-cover w-full">
   </div>
   <!------------------ Hero Section: Page Title End -------------->
 
@@ -101,8 +101,15 @@
           class="upload-box border-dashed border-3 bg-stone-555/5 border-stone-light w-full rounded-[40px] flex items-center justify-center gap-8 p-6 cursor-pointer relative hover:bg-stone-light/10 transition-colors duration-200 hover:border-stone-555">
           <div class="flex flex-col items-center gap-2 relative">
             <button type="button" title="Remove Photo" aria-label="Remove Photo"
-              class="remove-photo hidden absolute -right-3 -top-3 text-white hover:bg-cardinal/80 size-6 flex items-center justify-center rounded-full border-3 border-current bg-cardinal text-lg leading-0"
-              onclick="event.stopPropagation(); clearPreview();">x</button>
+              class="p-0 remove-photo hidden absolute -right-3 -top-3 text-cardinal hover:text-cardinal/80 grid place-items-center rounded-full border-none transition-colors duration-200 bg-white"
+              onclick="event.stopPropagation(); clearPreview();">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 24 24"
+                style="fill:currentColor;">
+                <path
+                  d="M12,2C6.47,2,2,6.47,2,12c0,5.53,4.47,10,10,10s10-4.47,10-10C22,6.47,17.53,2,12,2z M16.707,15.293 c0.391,0.391,0.391,1.023,0,1.414C16.512,16.902,16.256,17,16,17s-0.512-0.098-0.707-0.293L12,13.414l-3.293,3.293 C8.512,16.902,8.256,17,8,17s-0.512-0.098-0.707-0.293c-0.391-0.391-0.391-1.023,0-1.414L10.586,12L7.293,8.707 c-0.391-0.391-0.391-1.023,0-1.414s1.023-0.391,1.414,0L12,10.586l3.293-3.293c0.391-0.391,1.023-0.391,1.414,0 s0.391,1.023,0,1.414L13.414,12L16.707,15.293z">
+                </path>
+              </svg>
+            </button>
             <div class="upload-icon bg-[#d9d9d9] size-20 flex-none overflow-hidden rounded-lg"></div>
             <span
               class="filename-display  text-xs text-zinc-666/75 hidden absolute bottom-0 z-50 translate-y-full text-center"></span>

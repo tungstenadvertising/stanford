@@ -6,7 +6,7 @@
 @theme {
 	--font-sans: "Source Sans Pro", sans-serif;
 	--font-serif: 'Source Serif 4', serif;
-
+	--font-lobster: 'Lobster', cursive;
 
 	--color-*: initial;
 	--color-white: #fff;
@@ -32,17 +32,9 @@ body {
 	}
 }
 .container {
-	max-width: 1200px;
-	margin-inline: auto;
-	padding-inline: 16px;
-	position: relative;
-	z-index: 10;
+	@apply max-w-6xl mx-auto px-4 relative z-10;
 }
 .hero {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
 	&:after {
 		content: "";
 		width: 100%;
@@ -54,14 +46,6 @@ body {
 		z-index: 0;
 	}
 	.hero-image {
-		position: relative;
-		/* position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%; */
-		z-index: 0;
-		object-fit: cover;
-		width: 100%;
 		scale: 1.008;
 	}
 	.container {
@@ -71,23 +55,15 @@ body {
 		bottom: 0;
 		z-index: 1;
 	}
-	.page-title {
-		margin-bottom: 20px;
-		margin-inline: 20px;
-		font-size: clamp(47px, 8vw, 65px);
-		line-height: 1;
-		text-wrap: balance;
-		max-width: 33ch;
-	}
+
+}
+.page-title {
+	font-size: clamp(47px, 8vw, 65px);
+	max-width: 33ch;
 }
 a {
 	color: inherit;
 	text-decoration-thickness: 1px;
-}
-
-.divider {
-	border-top: 2px solid #c6c6c6;
-	border-bottom: 1px solid #fff;
 }
 .hero-divider {
 	border-width: clamp(3px, 0.5vw, 8px);
