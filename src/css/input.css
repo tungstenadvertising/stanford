@@ -60,6 +60,11 @@ body {
 		max-width: 33ch !important;
 		font-weight: 700 !important;
 		font-family: var(--font-sans) !important;
+		line-height: 1 !important;
+		border: none !important;
+		margin: 0 0 20px 0 !important;
+		padding: 0 !important;
+
 	}
 }
 
