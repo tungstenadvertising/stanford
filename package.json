@@ -1,16 +1,23 @@
 {
 	"dependencies": {
 		"@tailwindcss/cli": "^4.1.8",
+		"@tailwindcss/vite": "^4.1.8",
 		"sharp": "^0.34.2",
 		"tailwindcss": "^4.1.8"
 	},
 	"devDependencies": {
 		"concurrently": "^8.2.2",
+		"cpx": "^1.5.0",
 		"vite": "^5.2.0",
 		"webp-converter-cli": "^0.0.5"
 	},
 	"scripts": {
-		"dev": "concurrently \"vite\" \"npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --minify --watch\" ",
-		"webp": "node convert-images.js"
+		"dev": "vite",
+		"build": "vite build && cpx \"src/images/**/*.{webp,svg}\" build/images && cpx \"src/js/**/*\" build/js && node inject-css.js",
+		"preview": "vite preview",
+		"webp": "node convert-images.js",
+		"inject": "node inject-css.js",
+		"copy-static": "cpx \"src/images/**/*.{webp,svg}\" build/images && cpx \"src/js/**/*\" build/js",
+		"build:inject": "npm run build && npm run copy-static && npm run inject"
 	}
 }
