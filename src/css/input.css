@@ -35,7 +35,7 @@ body {
 }
 #main:has(.wrapper),
 #content:has(.wrapper) {
-	padding: 0 !important;
+	margin: 0 !important;
 	padding: 0 !important;
 }
 .wrapper {
