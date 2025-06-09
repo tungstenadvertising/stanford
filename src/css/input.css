@@ -35,8 +35,8 @@ body {
 }
 #main:has(.wrapper),
 #content:has(.wrapper) {
-	padding-left: 0 !important;
-	padding-right: 0 !important;
+	padding: 0 !important;
+	padding: 0 !important;
 }
 .wrapper {
 	@apply max-w-6xl mx-auto px-4 relative z-10;
