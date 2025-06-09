@@ -57,7 +57,7 @@ body {
 	}
 
 }
-.page-title {
+.page-header {
 	font-size: clamp(47px, 8vw, 65px);
 	max-width: 33ch;
 }
