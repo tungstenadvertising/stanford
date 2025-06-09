@@ -55,12 +55,14 @@ body {
 		bottom: 0;
 		z-index: 1;
 	}
+	.page-header {
+		font-size: clamp(47px, 8vw, 65px) !important;
+		max-width: 33ch !important;
+		font-weight: 700 !important;
+		font-family: var(--font-sans) !important;
+	}
+}
 
-}
-.page-header {
-	font-size: clamp(47px, 8vw, 65px);
-	max-width: 33ch;
-}
 a {
 	color: inherit;
 	text-decoration-thickness: 1px;
