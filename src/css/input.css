@@ -33,6 +33,11 @@ body {
 		box-sizing: border-box;
 	}
 }
+#main:has(.wrapper),
+#content:has(.wrapper) {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
 .wrapper {
 	@apply max-w-6xl mx-auto px-4 relative z-10;
 }
@@ -65,7 +70,7 @@ body {
 		line-height: 1 !important;
 		border: none !important;
 		margin: 0 0 20px 0 !important;
-		padding: 0 0 20px 20px !important;
+		padding: 0 0 30px 30px !important;
 		background: transparent !important;
 	}
 }
