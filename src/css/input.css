@@ -31,7 +31,7 @@ body {
 		box-sizing: border-box;
 	}
 }
-.container {
+.wrapper {
 	@apply max-w-6xl mx-auto px-4 relative z-10;
 }
 .hero {
@@ -48,7 +48,7 @@ body {
 	.hero-image {
 		scale: 1.008;
 	}
-	.container {
+	.wrapper {
 		padding-inline: 0;
 		position: absolute;
 		inset-inline: 0;
