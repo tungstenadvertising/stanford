@@ -42,6 +42,8 @@ body {
 	@apply max-w-6xl mx-auto px-4 relative z-10;
 }
 .hero {
+	container-type: inline-size;
+	container-name: hero;
 	&:after {
 		content: "";
 		width: 100%;
@@ -62,16 +64,20 @@ body {
 		bottom: 0;
 		z-index: 1;
 	}
-	.page-header {
+	h1.page-header {
 		font-size: clamp(47px, 8vw, 65px) !important;
 		max-width: 33ch !important;
 		font-weight: 700 !important;
 		font-family: var(--font-sans) !important;
 		line-height: 1 !important;
+		height: auto !important;
 		border: none !important;
-		margin: 0 0 20px 0 !important;
-		padding: 0 0 68px 12px !important;
+		margin: 0 0 30px 0 !important;
+		padding: 0 0 0 15px !important;
 		background: transparent !important;
+		@container hero (width > 1220px) {
+			margin-left: -35px !important;
+		}
 	}
 }
 
