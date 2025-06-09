@@ -27,14 +27,18 @@ htmlFiles.forEach(htmlFile => {
   html = html.replace(/<link[^>]*rel=["']stylesheet["'][^>]*href=["']\/?css\/style\.css["'][^>]*>/gi, '');
   html = html.replace(/<link[^>]*rel=["']stylesheet["'][^>]*href=["']\/?css\/input\.css["'][^>]*>/gi, '');
 
-  // Inject the CSS as a <style> tag before the first <style> tag in <head>, or before </head> if none exists
-  if (/<style[ >]/i.test(html)) {
-    html = html.replace(/<style([ >])/i, `<style>${cleanedCssContent}</style>\n<style$1`);
+  // If a <style> tag exists in <head>, prepend the injected CSS to its contents
+  const styleTagRegex = /(<style[^>]*>)([\s\S]*?)(<\/style>)/i;
+  if (styleTagRegex.test(html)) {
+    html = html.replace(styleTagRegex, (match, open, content, close) => {
+      return `${open}${cleanedCssContent}\n${content}${close}`;
+    });
   } else {
+    // Otherwise, inject as a new <style> tag before </head>
     html = html.replace('</head>', `<style>${cleanedCssContent}</style>\n</head>`);
   }
 
   fs.writeFileSync(filePath, html);
 });
 
-console.log('CSS injected into all HTML files in build/ (existing <style> tags preserved).');
+console.log('CSS injected and merged with existing <style> tags in build/.');
