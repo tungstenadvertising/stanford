@@ -96,7 +96,7 @@ body {
 
 	.hero-divider {
 		border-width: clamp(3px, 0.5vw, 8px);
-		border-style: solid;
+		border-style: solid !important;
 		border-bottom: 0 !important;
 		width: clamp(200px, 50vw, 498px);
 		margin-block: clamp(25px, 3vw, 45px);
