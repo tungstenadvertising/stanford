@@ -99,12 +99,12 @@
   </style>
 </head>
 
-<body>
+<body id="content">
 
 
 
   <!------------- Source Code to Copy: start ------------->
-  <div class="wrapper">
+  <div class="wrapper pb-20">
     <div class='relative mx-auto max-w-3xl'>
       <canvas id="canvas" style="
         height: 100vh;
@@ -4173,8 +4173,8 @@
 
 
     </div>
-    <div id="info-block">
-        <div class="bg-white text-black rounded-[10px] px-5 py-6 mt-8" style=" box-shadow: 0 0 10px #00000021;">
+    <div id="info-block" class="@container/main">
+        <div class="bg-white text-black rounded-[10px] px-5 py-6 mt-8">
           Dear <b class="text-cardinal">[[FIRSTNAME]]</b> <b class='text-cardinal'>[[LASTNAME]]</b>,
           <br>
           <br>
@@ -4202,7 +4202,7 @@
 
         </div>
 
-        <div class="bg-cardinal text-white rounded-[10px] py-5 px-5 mt-8">
+        <div class="bg-cardinal text-white rounded-[10px] py-5 my-6 @3xl/main:my-14 px-5">
           <div>
             <header class="text-2xl font-semibold inline-block">
               <span>Acknowledge the Offer of Admission and complete the Attestation</span>
@@ -4213,15 +4213,15 @@
           <ul class="m-0 px-4 space-y-1 marker:text-base text-white">
             <li>Electronically "Acknowledge" receipt of the offer within 10 business days of this notification:
               [[PREACCEPTDATE]]</li>
-            <li>Attest to abide by <a target="_blank" class="text-white" style="color: #d2c295;"
+            <li>Attest to abide by <a target="_blank" class="!text-stone-light"
                 href="https://medadmit.stanford.edu/JQFileUpload.ashx?_method=GET&folder=Accepted-Cand-Resources&file=Stanford+Medicine+Acceptance+Policy+2024.pdf">Stanford
-                Medicine Acceptance Policy</a> and the <a target="_blank" class="text-white" style="color: #d2c295;"
+                Medicine Acceptance Policy</a> and the <a target="_blank" class="!text-stone-light"
                 href="https://students-residents.aamc.org/applying-medical-school-amcas/application-and-acceptance-protocols-applicants">AAMC
                 Application and Acceptance Protocols for Applpipcants</a> </li>
             <li>Agree to communicate all candidate actions directly to Stanford Medicine
               using
               Stanford MedAdmit and immediately thereafter communicate the same candidate actions to AMCAS using the
-              <a target="_blank" class="text-white" style="color: #d2c295;"
+              <a target="_blank" class="!text-stone-light"
                 href="https://students-residents.aamc.org/applying-medical-school-amcas/amcas-choose-your-medical-school-tool?edit=">Choose
                 Your Medical School Tool.</a>
             </li>
@@ -4229,11 +4229,11 @@
         </div>
 
 
-        <h2 class="square-title text-cardinal font-semibold"><span>Applying for Financial Aid</span></h2>
+        <h2 class="square-title text-cardinal font-semibold mt-10"><span>Applying for Financial Aid</span></h2>
 
         <ul>
           <li>Candidates who wish to apply for Financial Aid need to create a <a
-              href="https://uit.stanford.edu/service/accounts" target="_blank" class="!text-cardinal font-bold">SUNet
+              href="https://uit.stanford.edu/service/accounts" target="_blank" class="!text-aqua font-bold">SUNet
               ID</a>,
             upload required
             documents, and
@@ -4241,7 +4241,7 @@
             of
             the April 30, Plan to Enroll deadline.</li>
           <li>To create the Stanford <a href="https://uit.stanford.edu/service/accounts" target="_blank"
-              class="font-bold !text-cardinal">SUNet ID</a>,
+              class="font-bold !text-aqua">SUNet ID</a>,
             your University ID is required:
             <b class="text-cardinal">[[UNIVERSITYID]]</b>
           </li>
@@ -4252,28 +4252,28 @@
         <b>Accepted Candidates must either select Plan to Enroll or Withdraw on or before April 30</b>
 
 
-        <div class="square-title  mt-5"><span class="text-cardinal bg-zinc-666 font-semibold">To Plan to Enroll</span>
+        <div class="square-title  mt-10"><span class="text-cardinal bg-zinc-666 font-semibold">To Plan to Enroll</span>
         </div>
 
         <ul>
           <li>If not yet done, create your Stanford <a href="https://uit.stanford.edu/service/accounts"
-              target="_blank" class="!text-cardinal font-bold">SUNet ID</a>.
+              target="_blank" class="!text-aqua font-bold">SUNet ID</a>.
             Your University ID is required: <b class="text-cardinal">[[UNIVERSITYID]]</b> </li>
           <li>Register your decision to "Plan to Enroll" in Stanford MedAdmit </li>
           <li>Register your decision to "Plan to Enroll" using <a
               href="https://students-residents.aamc.org/applying-medical-school-amcas/amcas-choose-your-medical-school-tool?edit="
-              target="_blank" class="!text-cardinal font-bold">Choose
+              target="_blank" class="!text-aqua font-bold">Choose
               Your Medical School Tool</a> </li>
         </ul>
 
-        <div class="square-title  mt-5"><span class="text-cardinal bg-zinc-666 font-semibold">To Withdraw</span></div>
+        <div class="square-title  mt-10"><span class="text-cardinal bg-zinc-666 font-semibold">To Withdraw</span></div>
         <ul>
           <li>Use Stanford MedAdmit to withdraw your application </li>
         </ul>
 
-        <div class="square-title  mt-5"><span class="text-cardinal bg-zinc-666 font-semibold">Contact</span></div>
+        <div class="square-title  mt-10"><span class="text-cardinal bg-zinc-666 font-semibold">Contact</span></div>
         <ul>
-          <li>If you have any questions or concerns, please email <a class="!text-cardinal font-bold"
+          <li>If you have any questions or concerns, please email <a class="!text-aqua font-bold"
               href="mailto:mdinterview@stanford.edu" target="_blank">mdaccepted@stanford.edu</a></li>
         </ul>
       </div>

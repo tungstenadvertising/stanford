@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body id="content">
 
   <!------------- Source Code to Copy: start ------------->
   <!------------------ Hero Section: Page Title Start -------------->
@@ -27,7 +27,7 @@
   <!------------------ Hero Section: Page Title End -------------->
 
 
-  <div class="wrapper px-4 mx-auto">
+  <div class="wrapper px-4 mx-auto @container pb-20">
 
     <!-------------------------------- Hero Divider ------------------------------->
     <hr class="hero-divider mx-auto text-cardinal border-current">
@@ -39,12 +39,12 @@
         <header class="text-2xl font-semibold inline-block">
           <span>The following information is required:</span>
           <br />
-          <hr class="border-t-2 border-white mt-3 border-solid">
+          <hr class="border-t-2 border-white mt-3 border-solid mb-0">
         </header>
       </div>
 
 
-      <div class="grid md:grid-cols-3 items-baseline gap-8 mt-0 text-balance">
+      <div class="grid @3xl:grid-cols-3 items-baseline gap-8 mt-0 text-balance">
         <div class="flex flex-col items-center">
           <div class="icon-box">
             <svg xmlns="http://www.w3.org/2000/svg" width="69" height="53" fill="currentColor" viewBox="0 0 69 53">
@@ -86,15 +86,15 @@
 
     <!----------------------------- Digital Photograph -------------------------------->
     <h2 class="square-title text-cardinal font-semibold"><span>Digital Photograph</span></h2>
-    <div class="grid md:grid-cols-12 items-center gap-4 md:gap-6 lg:gap-10 mb-10">
-      <div class="md:col-span-5">
+    <div class="grid @3xl:grid-cols-12 items-center gap-4 @3xl:gap-6 @4xl:gap-10 mb-10">
+      <div class="@3xl:col-span-5">
         Please upload a passport style photo of yourself (shoulders and above) for verification on Interview Day. The
         photo must be <b>2 x 2 (inches)</b> and abide by these <b><a
             href="https://travel.state.gov/content/travel/en/passports/how-apply/photos.html" target="_blank">digital
             specifications</a>.
           Eyeglasses are permitted</b>.
       </div>
-      <div class="md:col-span-7 p-4">
+      <div class="@3xl:col-span-7 p-4">
 
         <!------------- upload photo form Start ----------->
         <div
@@ -143,7 +143,7 @@
     </ul>
 
     <form>
-      <div class="sm:grid gap-4 grid-cols-12">
+      <div class="@2xl:grid gap-4 grid-cols-12">
         <div class="col-span-5 py-2">
           <input class="p-2 rounded-[5px] border-1 border-zinc-666 block w-full" name="interview-date"
             value="2022-11-07T11:37:18" type="datetime-local">
@@ -174,7 +174,7 @@
     <small class="italic">I understand and agree to abide by the terms and conditions outlined in the agreement. I also understand that my failure to do so will result in adverse consequences including (but not limited to) my being removed from any further consideration as a candidate for Stanford Medicine and/or any offer of admissions being rescinded. Completion of these steps indicates confirmation of your acceptance of the interview invitation on the designated date. </small>
 
     <form class="my-6">
-      <div class="sm:grid gap-4 grid-cols-12">
+      <div class="@2xl:grid gap-4 grid-cols-12">
         <div class="col-span-5 py-2">
           <input class="p-2 rounded-[5px] border-1 border-zinc-666 block w-full" name="interview-date"
             value="2022-11-07T11:37:18" type="datetime-local">
@@ -186,13 +186,13 @@
       </div>
     </form>
 
-    <h3 class="text-[26px] font-semibold text-cardinal mt-10">Accommodations</h3>
+    <header class="text-[26px] font-semibold text-cardinal mt-10 mb-6">Accommodations</header>
     <p class="mt-0">If you anticipate the need for accommodations (e.g. visual, audio, technological,
       etc.) during the interview day, please describe:</p>
     <form>
       <input class="w-full p-2 rounded-[5px] border-1 border-zinc-666">
     </form>
-    <p class="mt-5">Please contact <a class="!text-cardinal font-semibold" href="mailto:mdinterview@stanford.edu"
+    <p class="mt-5">Please contact <a class="!text-aqua font-semibold" href="mailto:mdinterview@stanford.edu"
         target="_blank">mdinterview@stanford.edu</a> if you have any
       questions or need
       assistance.</p>

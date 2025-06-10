@@ -6,7 +6,7 @@
 @theme {
 	--font-sans: "Source Sans Pro", sans-serif;
 	--font-serif: 'Source Serif 4', serif;
-	--font-lobster: 'Lobster', cursive;
+	--font-galada: 'Galada', cursive;
 
 	--color-*: initial;
 	--color-white: #fff;
@@ -38,118 +38,130 @@ body {
 	margin: 0 !important;
 	padding: 0 !important;
 }
-.wrapper {
-	@apply max-w-6xl mx-auto px-4 relative z-10;
-}
-.hero {
-	container-type: inline-size;
-	container-name: hero;
-	&:after {
-		content: "";
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		inset: 0;
-		background-color: #000;
-		opacity: 50%;
-		z-index: 0;
-	}
-	.hero-image {
-		scale: 1.008;
-	}
+#content {
 	.wrapper {
-		padding-inline: 0;
-		position: absolute;
-		inset-inline: 0;
-		bottom: 0;
-		z-index: 1;
+		max-width: 1152px;
+		margin-inline: auto;
+		padding-inline: 16px;
+		position: relative;
+		z-index: 10;
 	}
-	h1.page-header {
-		font-size: clamp(47px, 8vw, 65px) !important;
-		max-width: 33ch !important;
-		font-weight: 700 !important;
-		font-family: var(--font-sans) !important;
-		line-height: 1 !important;
-		height: auto !important;
-		border: none !important;
-		margin: 0 0 30px 0 !important;
-		padding: 0 0 0 15px !important;
-		background: transparent !important;
-		@container hero (width > 1220px) {
-			margin-left: -35px !important;
+	.hero {
+		container-type: inline-size;
+		container-name: hero;
+		&:after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			inset: 0;
+			background-color: #000;
+			opacity: 50%;
+			z-index: 0;
+		}
+		.hero-image {
+			scale: 1.008;
+		}
+		.wrapper {
+			padding-inline: 0;
+			position: absolute;
+			inset-inline: 0;
+			bottom: 0;
+			z-index: 1;
+		}
+		h1.page-header {
+			font-size: clamp(47px, 8vw, 65px) !important;
+			max-width: 33ch !important;
+			font-weight: 700 !important;
+			font-family: var(--font-sans) !important;
+			line-height: 1 !important;
+			height: auto !important;
+			border: none !important;
+			margin: 0 0 30px 0 !important;
+			padding: 0 0 0 15px !important;
+			background: transparent !important;
+			@container hero (width > 1220px) {
+				margin-left: -35px !important;
+			}
 		}
 	}
+
+	a {
+		color: inherit;
+		text-decoration-thickness: 1px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.hero-divider {
+		border-width: clamp(3px, 0.5vw, 8px);
+		border-style: solid;
+		width: clamp(200px, 50vw, 498px);
+		margin-block: clamp(25px, 3vw, 45px);
+	}
+	.square-title {
+		--square-size: 61px;
+		font-size: clamp(22px, 2.5vw, 26px);
+		display: grid;
+		grid-template-columns: var(--square-size) auto;
+		align-items: stretch;
+		gap: 5px;
+		margin-inline: -16px;
+		@media (width > 1160px) {
+			margin-inline: -32px;
+		}
+		&::before {
+			content: "";
+			width: var(--square-size);
+			height: var(--square-size);
+			display: inline-block;
+			background: var(--color-cardinal);
+		}
+		span {
+			background-color: var(--color-stone-light);
+			line-height: var(--square-size);
+			padding-inline: 20px;
+		}
+	}
+	.icon-box {
+		height: clamp(60px, 13vw, 100px);
+		display: grid;
+		place-items: center;
+		@media (max-width: 600px) {
+			margin-bottom: 10px;
+		}
+	}
+	.congratulations-ribbon {
+		.congratulations-text,
+		&:before,
+		&::after {
+			filter: drop-shadow(0px 1px 10px hsla(0, 0%, 0%, 0.3)) drop-shadow(0px 5px 3px hsla(0, 5%, 23%, 0.2)) drop-shadow(0px 20px 5px hsla(0, 44%, 33%, 0.4));
+		}
+		&:before,
+		&::after {
+			--offset: -80px;
+
+			content: "";
+			position: absolute;
+			top: 36px;
+			width: 118px;
+			height: 88px;
+			background-image: url("../images/ribbon-edge.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			z-index: 0;
+		}
+		&::before {
+			left: var(--offset);
+		}
+		&::after {
+			right: var(--offset);
+			scale: -1 1;
+		}
+	}
+
+
 }
 
-a {
-	color: inherit;
-	text-decoration-thickness: 1px;
-}
-.hero-divider {
-	border-width: clamp(3px, 0.5vw, 8px);
-	border-style: solid;
-	border-color: var(--color-cardinal);
-	width: clamp(200px, 50vw, 498px);
-	margin-block: clamp(25px, 3vw, 45px);
-}
 
-.square-title {
-	--square-size: 61px;
-	font-size: clamp(22px, 2.5vw, 26px);
-	display: grid;
-	grid-template-columns: var(--square-size) auto;
-	align-items: stretch;
-	gap: 5px;
-	margin-inline: -16px;
-	@media (width > 1160px) {
-		margin-inline: -32px;
-	}
-	&::before {
-		content: "";
-		width: var(--square-size);
-		height: var(--square-size);
-		display: inline-block;
-		background: var(--color-cardinal);
-	}
-	span {
-		background-color: var(--color-stone-light);
-		line-height: var(--square-size);
-		padding-inline: 20px;
-	}
-}
-.icon-box {
-	height: clamp(60px, 13vw, 100px);
-	display: grid;
-	place-items: center;
-	@media (max-width: 600px) {
-		margin-bottom: 10px;
-	}
-}
-.congratulations-ribbon {
-	.congratulations-text,
-	&:before,
-	&::after {
-		filter: drop-shadow(0px 1px 10px hsla(0, 0%, 0%, 0.3)) drop-shadow(0px 5px 3px hsla(0, 5%, 23%, 0.2)) drop-shadow(0px 20px 5px hsla(0, 44%, 33%, 0.4));
-	}
-	&:before,
-	&::after {
-		--offset: -80px;
-
-		content: "";
-		position: absolute;
-		top: 24px;
-		width: 118px;
-		height: 88px;
-		background-image: url("../images/ribbon-edge.svg");
-		background-repeat: no-repeat;
-		background-size: contain;
-		z-index: 0;
-	}
-	&::before {
-		left: var(--offset);
-	}
-	&::after {
-		right: var(--offset);
-		scale: -1 1;
-	}
-}
