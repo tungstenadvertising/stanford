@@ -123,6 +123,7 @@ body {
 			background-color: var(--color-stone-light);
 			line-height: var(--square-size);
 			padding-inline: 20px;
+			font-weight: 600 !important;
 		}
 	}
 	.icon-box {
