@@ -1,13 +1,12 @@
-console.log('Current working directory:', process.cwd());
-console.log('Looking for build directory at:', buildDir);
-console.log('Looking for CSS directory at:', cssDir);
-
-
 const fs = require('fs');
 const path = require('path');
 
 const buildDir = path.join(__dirname, 'build');
 const cssDir = path.join(buildDir, 'css');
+
+console.log('Current working directory:', process.cwd());
+console.log('Looking for build directory at:', buildDir);
+console.log('Looking for CSS directory at:', cssDir);
 
 // Find the built CSS file (e.g., style.css)
 const cssFile = fs.readdirSync(cssDir).find(f => f.endsWith('.css'));
