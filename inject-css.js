@@ -27,9 +27,11 @@ htmlFiles.forEach(htmlFile => {
   const filePath = path.join(buildDir, htmlFile);
   let html = fs.readFileSync(filePath, 'utf8');
 
-  // Remove any <link rel="stylesheet" ... href="css/style.css" ...> or href="/css/style.css" ...>
-  html = html.replace(/<link[^>]*rel=["']stylesheet["'][^>]*href=["']\/?css\/style\.css["'][^>]*>/gi, '');
-  html = html.replace(/<link[^>]*rel=["']stylesheet["'][^>]*href=["']\/?css\/input\.css["'][^>]*>/gi, '');
+  // Replace relative href with absolute URL for stylesheet
+  html = html.replace(
+    /href=["']\/?stanford\/css\/style\.css["']/g,
+    'href="https://tungstenadvertising.github.io/stanford/css/style.css"'
+  );
 
   // If a <style> tag exists in <head>, prepend the injected CSS to its contents
   const styleTagRegex = /(<style[^>]*>)([\s\S]*?)(<\/style>)/i;
@@ -46,4 +48,4 @@ htmlFiles.forEach(htmlFile => {
   fs.writeFileSync(filePath, html);
 });
 
-console.log('CSS injected and merged with existing <style> tags in build/.');
+console.log('CSS injected and stylesheet link updated to absolute URL in build/.');
