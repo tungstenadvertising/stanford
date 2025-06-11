@@ -1,3 +1,8 @@
+console.log('Current working directory:', process.cwd());
+console.log('Looking for build directory at:', buildDir);
+console.log('Looking for CSS directory at:', cssDir);
+
+
 const fs = require('fs');
 const path = require('path');
 
@@ -38,6 +43,7 @@ htmlFiles.forEach(htmlFile => {
     html = html.replace('</head>', `<style>${cleanedCssContent}</style>\n</head>`);
   }
 
+  console.log('Processing HTML file:', filePath);
   fs.writeFileSync(filePath, html);
 });
 
