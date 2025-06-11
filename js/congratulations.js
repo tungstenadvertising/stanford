@@ -1,3 +1,4 @@
+
 gsap.set('#info-block > *', {opacity: 0, y: 20})
 // ammount to add on each button press
       const confettiCount = 200
@@ -208,8 +209,14 @@ gsap.set('#info-block > *', {opacity: 0, y: 20})
 
 
 
+
+      const infoBlock = document.querySelector('#info-block')
+
       const welcomeText = new SplitType('#envelope-text-welcome')
       const nameText = new SplitType('#envelope-text-name')
+
+
+
       const congratsTL = gsap.timeline({
         paused: true,
         onComplete: () => {
@@ -232,16 +239,21 @@ gsap.set('#info-block > *', {opacity: 0, y: 20})
       const openMessage = document.querySelector('#open-message')
       const toggleBtn = document.querySelector('#congratulations-btn')
       const envelope = document.querySelector('#envelope')
+
       toggleBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        congratsTL.play();
 
+        congratsTL.play();
       })
 
       congratsTL
         .fromTo(openMessage, {
           opacity: 1,
-          scale: 1
+          scale: 1,
+          onComplete: function () {
+            gsap.set('#envelope-text-welcome', {opacity: 1});
+            gsap.set('#envelope-text-name', {opacity: 1});
+          }
         }, {
           opacity: 0,
           scale: 0,
