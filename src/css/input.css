@@ -8,7 +8,7 @@
 	--font-serif: 'Source Serif 4', serif;
 	--font-galada: 'Galada', cursive;
 
-	/* --color-*: initial; */
+	--color-*: initial;
 	--color-white: #fff;
 	--color-black: #000;
 	--color-cardinal: #8c1515;
@@ -121,9 +121,9 @@ body {
 		}
 		span {
 			background-color: var(--color-stone-light);
-			line-height: var(--square-size);
 			padding-inline: 20px;
 			font-weight: 600 !important;
+			display: grid;
 		}
 	}
 	.icon-box {
@@ -165,5 +165,6 @@ body {
 
 
 }
+
 
 
