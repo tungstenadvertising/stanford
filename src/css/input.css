@@ -124,6 +124,7 @@ body {
 			padding-inline: 20px;
 			font-weight: 600 !important;
 			display: grid;
+			align-items: center;
 		}
 	}
 	.icon-box {
