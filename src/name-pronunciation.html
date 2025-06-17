@@ -11,6 +11,76 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/input.css">
 
+  <style>
+    .single-page-form {
+      max-width: 1152px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    input[type="datetime-local"],
+    input[type="text"] {
+      height: 3rem;
+      padding: 0.625rem;
+      border-radius: 10px;
+      font-size: 1.25rem;
+      border-width: 1px;
+      border-color: #666666;
+      display: block;
+      width: 100%;
+    }
+    /* Form styles */
+    .file-input-container {
+      position: relative;
+      height: 41px;
+    }
+    .file-label {
+      background-color: white;
+      line-height: 1;
+      border-radius: 5px;
+      color: #666666;
+      padding: 0.5rem 0.75rem;
+      width: 100%;
+      position: absolute;
+      inset: 0;
+    }
+    .file-input {
+      display: none;
+    }
+    .browse-button {
+      background-color: #c6c6c6;
+      transition: background-color 0.3s;
+      color: white;
+      position: absolute;
+      top: 0.375rem;
+      right: 0.5rem;
+      border: none;
+      font-size: 1.25rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .browse-button:hover {
+      background-color: #666666;
+    }
+    .upload-button {
+      background-color: white;
+      transition: background-color 0.3s;
+      color: #8C1515;
+      border-radius: 5px;
+      border: none;
+      padding: 0.25rem 0.75rem;
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+    .upload-button:hover {
+      background-color: #666666;
+    }
+    .upload-button:disabled {
+      background-color: #c6c6c6;
+      color: white;
+      cursor: not-allowed;
+    }
+  </style>
 </head>
 
 <body id="content"  >
@@ -41,20 +111,15 @@
         </header>
       </div>
       <form action="" method="POST" id="uploadForm">
-        <div style="position: relative; height: 41px;">
-          <label class="bg-white leading-tight rounded-[5px] text-zinc-666 py-2 w-full absolute inset-0 px-3"
-            id="fileLabel">
-            <input style="display: none;" id="fileInput" type="file" accept=".mp3,.mp4,.mp4a">
+        <div class="file-input-container">
+          <label class="file-label" id="fileLabel">
+            <input class="file-input" id="fileInput" type="file" accept=".mp3,.mp4,.mp4a">
             <span class="file-text">select a file</span>
           </label>
-          <button type="button"
-            class="bg-zinc-c6c6c6 hover:bg-zinc-500 transition-colors text-white absolute top-1.5 border-none right-2 text-xl rounded-[5px] cursor-pointer"
-            onclick="document.getElementById('fileInput').click()">Browse</button>
+          <button type="button" class="browse-button" onclick="document.getElementById('fileInput').click()">Browse</button>
         </div>
         <div class="flex justify-end">
-          <button type="submit"
-            class="disabled:bg-zinc-c6c6c6 disabled:text-white hover:bg-zinc-500 transition-colors text-cardinal rounded-[5px] border-none px-3 py-1 text-xl mt-4 disabled:cursor-not-allowed"
-            id="uploadButton" disabled>Upload File</button>
+          <button type="submit" class="upload-button" id="uploadButton" disabled>Upload File</button>
         </div>
       </form>
 
