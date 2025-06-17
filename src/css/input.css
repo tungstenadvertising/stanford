@@ -92,6 +92,10 @@ body {
 		&:hover {
 			text-decoration: none;
 		}
+		&.plus-link {
+			text-decoration: none !important;
+			color: var(--color-cardinal) !important;
+		}
 	}
 
 	.hero-divider {
