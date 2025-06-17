@@ -74,7 +74,7 @@
       transition-duration: 0.3s;
       transition-timing-function: ease-in-out;
       filter: drop-shadow(0 1px 4px hsla(0deg 0% 0% / 0.3)) drop-shadow(3px 5px 17px rgba(101, 33, 33, 0.15));
-
+      cursor: pointer;
 
       &:after {
         content: '';
@@ -86,6 +86,14 @@
         z-index: 1;
         opacity: 0.4;
       }
+    }
+
+    .swiper-slide a {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      text-decoration: none;
+      color: inherit;
     }
 
     .swiper-slide img {
@@ -237,9 +245,9 @@
     <!-------------------------------- Hero Divider ------------------------------->
     <hr class="hero-divider mx-auto text-cardinal border-current">
 
-    <div class="square-title text-cardinal"><span>Land Acknowledgement</span></div>
+    <div class="square-title text-cardinal mb-6"><span>Land Acknowledgement</span></div>
 
-    <p class="mt-6">Stanford University sits on the ancestral land of the Muwekma Ohlone Tribe. This land was and continues to be of
+    <p>Stanford University sits on the ancestral land of the Muwekma Ohlone Tribe. This land was and continues to be of
       great importance of the Ohlone people. Consistent with our values of community and inclusion, we have a
       responsibility to acknowledge, honor, and make visible the University's relationship to Native peoples. </p>
   </div>
@@ -247,76 +255,86 @@
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="https://tungstenadvertising.github.io/stanford/images/slide-1.webp" alt="Slide 1" width="426" height="512" fetchpriority="low" decoding="async"
-            loading="lazy" />
-          <div class="swiper-lazy-preloader"></div>
-          <div class="caption-box">The Dish is a
-            special area to both Stanford and the surrounding communities, and it serves many purposes.</div>
-          <a href="https://dish.stanford.edu" class="plus-link" target="_blank">+</a>
+          <a href="https://dish.stanford.edu" target="_blank">
+            <img src="https://tungstenadvertising.github.io/stanford/images/slide-1.webp" alt="Slide 1" width="426" height="512" fetchpriority="low" decoding="async"
+              loading="lazy" />
+            <div class="swiper-lazy-preloader"></div>
+            <div class="caption-box">The Dish is a
+              special area to both Stanford and the surrounding communities, and it serves many purposes.</div>
+          </a>
         </div>
         <div class="swiper-slide">
-          <img src="https://tungstenadvertising.github.io/stanford/images/slide-2.webp" alt="Slide 2" fetchpriority="low" decoding="async" loading="lazy" />
-          <div class="swiper-lazy-preloader"></div>
-          <div class="caption-box">Stanford Memorial
-            Church is located at the center of Stanford University, and is "the principle building ...</div>
-          <a href="https://orsl.stanford.edu/memorial-church" class="plus-link" target="_blank">+</a>
+          <a href="https://orsl.stanford.edu/memorial-church" target="_blank">
+            <img src="https://tungstenadvertising.github.io/stanford/images/slide-2.webp" alt="Slide 2" fetchpriority="low" decoding="async" loading="lazy" />
+            <div class="swiper-lazy-preloader"></div>
+            <div class="caption-box">Stanford Memorial
+              Church is located at the center of Stanford University, and is "the principle building ...</div>
+          </a>
         </div>
         <div class="swiper-slide">
-          <img src="https://tungstenadvertising.github.io/stanford/images/slide-3.webp" alt="Slide 3" fetchpriority="low" decoding="async" loading="lazy" />
-          <div class="swiper-lazy-preloader"></div>
-          <div class="caption-box">Union Square @
-            Tresidder's lively campus hub offers a variety of options for all tastes and schedules...</div>
-          <a href="https://rde.stanford.edu/dining-hospitality/union-square-tresidder-memorial-union" class="plus-link" target="_blank">+</a>
+          <a href="https://rde.stanford.edu/dining-hospitality/union-square-tresidder-memorial-union" target="_blank">
+            <img src="https://tungstenadvertising.github.io/stanford/images/slide-3.webp" alt="Slide 3" fetchpriority="low" decoding="async" loading="lazy" />
+            <div class="swiper-lazy-preloader"></div>
+            <div class="caption-box">Union Square @
+              Tresidder's lively campus hub offers a variety of options for all tastes and schedules...</div>
+          </a>
         </div>
         <div class="swiper-slide">
-          <img src="https://tungstenadvertising.github.io/stanford/images/slide-4.webp" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
-          <div class="swiper-lazy-preloader"></div>
-          <div class="caption-box">The Hoover
-            Institution Library & Archives supports a vibrant community of scholars interested in the meaning and role
-            of history and is open to anyone.</div>
-          <a href="https://www.hoover.org/library-archives/visit" class="plus-link" target="_blank">+</a>
+          <a href="https://www.hoover.org/library-archives/visit" target="_blank">
+            <img src="https://tungstenadvertising.github.io/stanford/images/slide-4.webp" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
+            <div class="swiper-lazy-preloader"></div>
+            <div class="caption-box">The Hoover
+              Institution Library & Archives supports a vibrant community of scholars interested in the meaning and role
+              of history and is open to anyone.</div>
+          </a>
         </div>
         <div class="swiper-slide">
-          <img src="https://tungstenadvertising.github.io/stanford/images/slide-5.webp" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
-          <div class="swiper-lazy-preloader"></div>
-          <div class="caption-box">A self-guided tour
-            of Stanford Gardens</div>
-          <a href="https://visit.stanford.edu/pdf/explore-campus/a_self-guided_tour_of_stanford_gardens.pdf" class="plus-link" target="_blank">+</a>
+          <a href="https://visit.stanford.edu/pdf/explore-campus/a_self-guided_tour_of_stanford_gardens.pdf" target="_blank">
+            <img src="https://tungstenadvertising.github.io/stanford/images/slide-5.webp" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
+            <div class="swiper-lazy-preloader"></div>
+            <div class="caption-box">A self-guided tour
+              of Stanford Gardens</div>
+          </a>
         </div>
         <div class="swiper-slide">
-          <img src="https://tungstenadvertising.github.io/stanford/images/slide-6.webp" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
-          <div class="swiper-lazy-preloader"></div>
-          <div class="caption-box">This 13-minute
-            student-hosted virtual tour is best viewed at 1080s.</div>
-          <a href="https://visit.stanford.edu/tours/virtual/" class="plus-link" target="_blank">+</a>
+          <a href="https://visit.stanford.edu/tours/virtual/" target="_blank">
+            <img src="https://tungstenadvertising.github.io/stanford/images/slide-6.webp" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
+            <div class="swiper-lazy-preloader"></div>
+            <div class="caption-box">This 13-minute
+              student-hosted virtual tour is best viewed at 1080s.</div>
+          </a>
         </div>
         <div class="swiper-slide">
-          <img src="https://tungstenadvertising.github.io/stanford/images/slide-7.webp" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
-          <div class="swiper-lazy-preloader"></div>
-          <div class="caption-box">Self-guided tour
-            Stanford Arts District (and others arts facilities)...</div>
-          <a href="https://visit.stanford.edu/pdf/explore-campus/self-guided_tour_-_stanford_arts_district.pdf" class="plus-link" target="_blank">+</a>
+          <a href="https://visit.stanford.edu/pdf/explore-campus/self-guided_tour_-_stanford_arts_district.pdf" target="_blank">
+            <img src="https://tungstenadvertising.github.io/stanford/images/slide-7.webp" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
+            <div class="swiper-lazy-preloader"></div>
+            <div class="caption-box">Self-guided tour
+              Stanford Arts District (and others arts facilities)...</div>
+          </a>
         </div>
         <div class="swiper-slide">
-          <img src="https://tungstenadvertising.github.io/stanford/images/slide-8.webp" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
-          <div class="swiper-lazy-preloader"></div>
-          <div class="caption-box">Palm Drive,
-            Stanford's grand main entry, welcomes students and visitors to a university...</div>
-          <a href="https://125.stanford.edu/kiosk/k11/" class="plus-link" target="_blank">+</a>
+          <a href="https://125.stanford.edu/kiosk/k11/" target="_blank">
+            <img src="https://tungstenadvertising.github.io/stanford/images/slide-8.webp" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
+            <div class="swiper-lazy-preloader"></div>
+            <div class="caption-box">Palm Drive,
+              Stanford's grand main entry, welcomes students and visitors to a university...</div>
+          </a>
         </div>
         <div class="swiper-slide">
-          <img src="https://tungstenadvertising.github.io/stanford/images/slide-9.webp" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
-          <div class="swiper-lazy-preloader"></div>
-          <div class="caption-box">Stanford History:
-            In 1884, tragedy struck the family when Leland and Jane's only child...</div>
-          <a href="https://founders.stanford.edu/stanford-history" class="plus-link" target="_blank">+</a>
+          <a href="https://founders.stanford.edu/stanford-history" target="_blank">
+            <img src="https://tungstenadvertising.github.io/stanford/images/slide-9.webp" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
+            <div class="swiper-lazy-preloader"></div>
+            <div class="caption-box">Stanford History:
+              In 1884, tragedy struck the family when Leland and Jane's only child...</div>
+          </a>
         </div>
         <div class="swiper-slide">
-          <img src="https://tungstenadvertising.github.io/stanford/images/slide-10.webp" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
-          <div class="swiper-lazy-preloader"></div>
-          <div class="caption-box">Stanford University
-            Quadrangle, Stanford University Campus, Stanford, Santa Clara County, CA</div>
-          <a href="https://125.stanford.edu/then-and-now/main-quad/" class="plus-link" target="_blank" target="_blank">+</a>
+          <a href="https://125.stanford.edu/then-and-now/main-quad/" target="_blank">
+            <img src="https://tungstenadvertising.github.io/stanford/images/slide-10.webp" alt="Slide 4" fetchpriority="low" decoding="async" loading="lazy" />
+            <div class="swiper-lazy-preloader"></div>
+            <div class="caption-box">Stanford University
+              Quadrangle, Stanford University Campus, Stanford, Santa Clara County, CA</div>
+          </a>
         </div>
       </div>
 
