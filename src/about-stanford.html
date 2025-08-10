@@ -267,9 +267,10 @@
                class="w-full h-auto object-cover align-middle"
                width="589"
                height="266"  style="scale: 1.01; filter: brightness(1.05) saturate(1.05);">
-          <div class="absolute bottom-4 left-4 text-white text-sm">
-            <p>This 13-minute student-hosted</p>
-            <p>virtual tour is best viewed at 1080s.</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 text-white text-sm font-bold" style=" text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 10px rgba(0, 0, 0, 0.2);">
+            <p class="m-0">This 13-minute student-hosted</p>
+            <p class="m-0">virtual tour is best viewed at 1080s.</p>
           </div>
           <div class="absolute bottom-4 right-4">
             <div class="bg-cardinal rounded-full p-3 flex items-center justify-center">
@@ -354,12 +355,30 @@
 
     <!-- Two Videos Section -->
     <div class="grid grid-cols-1 @4xl:grid-cols-12 gap-8 @4xl:gap-12 mb-12">
-      <div class="@4xl:col-span-6 flex flex-col">
-        <video src="https://tungstenadvertising.github.io/stanford/videos/about-stanford-video-1.mp4" class="w-full h-auto object-cover align-middle rounded-2xl" width="634" height="442" controls poster="https://tungstenadvertising.github.io/stanford/images/video2-thumb.webp">
-      </div>
-      <div class="@4xl:col-span-6 flex flex-col ">
-        <video src="https://tungstenadvertising.github.io/stanford/videos/about-stanford-video-2.mp4" class="w-full h-auto object-cover align-middle rounded-2xl" width="634" height="442" controls poster="https://tungstenadvertising.github.io/stanford/images/video3-thumb.webp">
-      </div>
+                             <div class="@4xl:col-span-6 flex flex-col">
+           <div class="relative rounded-lg overflow-hidden">
+             <video src="https://tungstenadvertising.github.io/stanford/videos/about-stanford-video-1.mp4" class="w-full h-auto object-cover align-middle rounded-2xl" width="634" height="442" poster="https://tungstenadvertising.github.io/stanford/images/video2-thumb.webp"></video>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+              <div class="bg-cardinal rounded-full p-3 flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M8 5v10l8-5-8-5z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+                             <div class="@4xl:col-span-6 flex flex-col ">
+           <div class="relative rounded-lg overflow-hidden">
+             <video src="https://tungstenadvertising.github.io/stanford/videos/about-stanford-video-2.mp4" class="w-full h-auto object-cover align-middle rounded-2xl" width="634" height="442" poster="https://tungstenadvertising.github.io/stanford/images/video3-thumb.webp"></video>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+              <div class="bg-cardinal rounded-full p-3 flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M8 5v10l8-5-8-5z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
 
 
