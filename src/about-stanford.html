@@ -16,15 +16,13 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <style>
-    .swiper-wrapper-fade {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      padding: 20px 0;
+
+    :root {
+      --swiper-navigation-size: clamp(35px, 10vw, 64px);
     }
 
-    .swiper-wrapper-fade::before,
-    .swiper-wrapper-fade::after {
+    .swiper::before,
+    .swiper::after {
       content: '';
       position: absolute;
       top: 0;
@@ -34,20 +32,20 @@
       pointer-events: none;
     }
 
-    .swiper-wrapper-fade::before {
+    .swiper::before {
       left: 0;
       background: linear-gradient(to right, white 5%, transparent);
     }
 
-    .swiper-wrapper-fade::after {
+    .swiper::after {
       right: 0;
       background: linear-gradient(to left, white 5%, transparent);
     }
 
     @media (max-width: 640px) {
 
-      .swiper-wrapper-fade::before,
-      .swiper-wrapper-fade::after {
+      .swiper::before,
+      .swiper::after {
         display: none;
       }
     }
@@ -75,6 +73,10 @@
       transition-timing-function: ease-in-out;
       filter: drop-shadow(0 1px 4px hsla(0deg 0% 0% / 0.3)) drop-shadow(3px 5px 17px rgba(101, 33, 33, 0.15));
       cursor: pointer;
+
+      &:not(.swiper-slide-active) a {
+        pointer-events: none;
+      }
 
       &:after {
         content: '';
@@ -108,6 +110,7 @@
     .swiper-slide-prev,
     .swiper-slide-next {
       z-index: 2000 !important;
+
     }
 
     .swiper-slide-active {
@@ -131,23 +134,15 @@
     .swiper .swiper-button-prev,
     .swiper .swiper-button-next {
       color: var(--color-cardinal);
+      filter: drop-shadow(0px 0 4px white) drop-shadow(0px 0 20px white);
+
 
       &:after {
         font-size: clamp(35px, 10vw, 64px) !important;
       }
     }
 
-    @media (width > 400px) {
-      .swiper-button-prev {
-        left: calc(50% - 180px);
-        transform: translateX(-50%);
-      }
 
-      .swiper-button-next {
-        right: calc(50% - 180px);
-        transform: translateX(50%);
-      }
-    }
 
 
 
